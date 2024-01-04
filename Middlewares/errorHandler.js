@@ -24,16 +24,17 @@ const errorHandler = (err, req, res, next) => {
                 {
                     title: "Forbidden", message: err.message, stackTrace: err.stack
                 });
+            break;  // <-- Add break statement here
         case constants.NOT_FOUND:
             res.json(
                 {
                     title: "Not found", message: err.message, stackTrace: err.stack
                 });
+            break;  // <-- Add break statement here
         default:
             console.log("no error");
             break;
     }
-
 };
 
 module.exports = errorHandler;
