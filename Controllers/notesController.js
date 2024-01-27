@@ -113,5 +113,6 @@ const searchQuery = asyncHandler(async (req, res) => {
     res.status(200).json({ notes: matchingNotes });
 
 });
+//test
 
 module.exports = { getNotes, createNote, updateNote, deleteNote, getNote, shareNote, searchQuery };
